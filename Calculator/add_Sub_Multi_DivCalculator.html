@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My First Calculator</title>
+    <style>
+        button{
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 10px 28px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    
+    Num 1: <input type="number" id="num1"onclick="this.value=''"/><br><br> <!--Clear input on mouse click-->
+    Num 2: <input type="number" id="num2"onclick="this.value=''"/><br><br><!--Clear input on mouse click-->
+
+            <button  onclick="sum()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mul()">*</button>
+            <button onclick="div()">/</button>
+    
+    <script>
+
+        function sum(){
+                var num1=document.getElementById('num1').value;
+                var num2=document.getElementById('num2').value;
+                var result= parseFloat(num1)+parseFloat(num2);
+                if(!isNaN(result)){
+                    document.getElementById('ans').innerHTML="Result: "+result;
+                }
+            }
+        
+        function sub(){
+            var num1=document.getElementById('num1').value;
+            var num2=document.getElementById('num2').value;
+            var result= parseFloat(num1)-parseFloat(num2);
+            if(!isNaN(result)){
+                document.getElementById('ans').innerHTML="Result: "+result;
+            }
+        }
+
+        function mul(){
+                var num1=document.getElementById('num1').value;
+                var num2=document.getElementById('num2').value;
+                var result= parseFloat(num1)*parseFloat(num2);
+                if(!isNaN(result)){
+                    document.getElementById('ans').innerHTML="Result: "+result;
+                }
+            }
+        
+        function div(){
+            var num1=document.getElementById('num1').value;
+            var num2=document.getElementById('num2').value;
+            var result= parseFloat(num1)/parseFloat(num2);
+            if(!isNaN(result)){
+                document.getElementById('ans').innerHTML="Result: "+result;
+            }
+        }
+    </script>
+
+    <br><br><h1 id="ans"></h1>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get and Set input in JS</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="txt" name="txt" onclick="this.value=''"/> 
+     <!--Clear input on mouse click-->
+    <button style="background:coral;" onclick="getAndSetValue()">Get Value</button>
+    <input style="background:gray;text-align: center;" type="text" id="txt2" name="txt"/>
+    <script>
+        //set value using ID
+        //document.getElementById('txt').value="Text Here";
+
+         //set value using input
+         document.getElementsByTagName('input')[0].value="Input Value";
+
+         //get value using another EditText
+         function getAndSetValue(){
+             var txt1=document.getElementById('txt').value;
+             document.getElementById('txt2').value=txt1;
+         }
+
+        //get value into alert
+        function getValue(){
+            var txt=document.getElementByT("txt").value;
+            alert(txt);
+        }
+    </script>
+</body>
+</html>
