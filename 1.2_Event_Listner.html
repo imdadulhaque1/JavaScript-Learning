@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS event listners</title>
+</head>
+<body>
+    <button onmouseover="alertOver()">CLICK ME</button>
+    <h2 id="demo"></h2>
+
+    <button onmousedown="alertDown()" onmouseup="alertUp()">ANOTHER CLICK</button>
+    <h2 id="down"></h2>
+    
+    <button id="clickButton">Click  Button</button>
+    <script>
+        function alertOver(){
+            //alert("Hello, Imdadul Haque !");
+            document.querySelector('#demo').innerHTML="Hello, Imdadul Haque !";
+        }
+
+        function alertDown(){
+            document.querySelector('#down').innerHTML="Hello, This is onMouseDown !";
+        }
+        function alertUp(){
+            document.querySelector('#down').innerHTML="";
+        }
+
+         document.querySelector('#clickButton').addEventListener(  )
+    </script>
+</body>
+</html>

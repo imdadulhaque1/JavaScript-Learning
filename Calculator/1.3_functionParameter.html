@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function with parameter</title>
+</head>
+<body>
+    <input type="number" name="text" id="in_1" onclick="this.value=''">
+    <input type="number" name="text" id="in_2" onclick="this.value=''">
+    <button type="submit" onclick="getAndSetValue()">ADD</button><br>
+    <textarea type="text" id="result">Result is comming........</textarea>
+
+    <script>
+        /*function getAndSetValue(){
+            var in_1=document.getElementById('in_1').value;
+            var in_2=document.getElementById('in_2').value;
+
+            function addition(in_1, in_2){
+                var add=in_1(parseInt)+in_2(parseInt);
+                //document.getElementById('result').value=add;
+            }
+            addition(in_1,in_2);
+        }*/
+        function addition(in_1, in_2){
+                var add=in_1(parseInt)+in_2(parseInt);
+                //document.getElementById('result').value=add;
+                document.write(add);
+            }
+        addition(5,3);
+    </script>
+</body>
+</html>

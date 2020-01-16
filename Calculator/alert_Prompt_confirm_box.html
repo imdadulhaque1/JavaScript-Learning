@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alert Confirm Prompt Box</title>
+</head>
+<body>
+    <input type="number" name="number" id="inp" onclick="this.value=''">
+    <button type="submit" onclick="getAndSetValue()">Submit</button>
+    <script>
+        //Alert = 1
+        //Confirm = 2
+        //Prompt = 3
+        
+        function getAndSetValue(){
+            var num=document.getElementById('inp').value;
+            switch(num){
+            case '1':
+                var a= 10;
+                var b= 20;
+                if(a>b){
+                    alert("A is Greter ! "+a);
+                }
+                else{
+                    alert("A is Greter ! "+b);
+                }
+                //var in_1=document.getElementById('inp').value;
+                //var in_1=document.getElementById('inp').value;
+                break;
+
+            case '2':
+                var s= confirm('Do you like to gatherng the extra knowledge ?');
+                if(s){
+                    alert("Thanks is for True!");
+                }
+                else{
+                    alert("Sorry is for false!");
+                }
+                break;
+
+            case '3':
+                var in_1= prompt('Please enter your marks !');
+                //alert(a);
+                //document.write(a);
+
+                if(in_1 >=80 && in_1<=100){
+                    //document.getElementById('in_2').value="A+";
+                    document.write("A+");
+                }
+                else if(in_1 >=70 && in_1<=79){
+                    document.write("A");
+                    //document.getElementById('in_2').value="A";
+                }
+                else if(in_1 >=60 && in_1<=69){
+                    //document.getElementById('in_2').value="B";
+                    document.write("B");
+                }
+                else if(in_1 >=50 && in_1<=59){
+                    //document.getElementById('in_2').value="C";
+                    document.write("C");
+                }
+                else if(in_1 >=40 && in_1<=49){
+                    //document.getElementById('in_2').value="D";
+                    document.write("D");
+                }
+                else if(in_1 <40){
+                    //document.getElementById('in_2').value="FaiL";
+                    document.write("Fail.");
+                }
+                else{
+                    //document.getElementById('in_2').value="You entered a wrong keyword !";
+                    document.write("You entered a wrong keyword !");
+                }
+                break;
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
